@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		686C413C2681F8760036F5A1 /* AgregarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C413B2681F8760036F5A1 /* AgregarViewController.swift */; };
 		68B7A964267A7BFF0062FB50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7A963267A7BFF0062FB50 /* AppDelegate.swift */; };
 		68B7A966267A7BFF0062FB50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7A965267A7BFF0062FB50 /* SceneDelegate.swift */; };
 		68B7A968267A7BFF0062FB50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7A967267A7BFF0062FB50 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		686C413B2681F8760036F5A1 /* AgregarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarViewController.swift; sourceTree = "<group>"; };
 		68B7A960267A7BFF0062FB50 /* AdrianJSONRESTful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdrianJSONRESTful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B7A963267A7BFF0062FB50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68B7A965267A7BFF0062FB50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				68B7A977267A833E0062FB50 /* Users.swift */,
 				68B7A979267A90A10062FB50 /* BuscarViewController.swift */,
 				68B7A97B267A90BA0062FB50 /* Peliculas.swift */,
+				686C413B2681F8760036F5A1 /* AgregarViewController.swift */,
 			);
 			path = AdrianJSONRESTful;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686C413C2681F8760036F5A1 /* AgregarViewController.swift in Sources */,
 				68B7A97C267A90BA0062FB50 /* Peliculas.swift in Sources */,
 				68B7A97A267A90A10062FB50 /* BuscarViewController.swift in Sources */,
 				68B7A978267A833E0062FB50 /* Users.swift in Sources */,

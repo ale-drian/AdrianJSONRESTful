@@ -31,10 +31,10 @@ class ViewController: UIViewController {
                print("Nombre de usuario y/o contraseña es incorrecto")
             }else{
                 print("Logeo exitoso")
+                self.performSegue(withIdentifier: "segueLogeo", sender: nil)
                 for data in self.users{
                     print("id\(data.id),nombre:\(data.nombre),email:\(data.email)")
                 }
-                self.performSegue(withIdentifier: "segueLogeo", sender: nil)
             }
         }
     }
