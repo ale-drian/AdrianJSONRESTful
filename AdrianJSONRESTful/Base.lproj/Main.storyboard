@@ -188,12 +188,21 @@
                                 <action selector="btnSalir:" destination="NHG-Gu-kwu" id="DUr-Kk-XUP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="+" image="plus" catalog="system" id="0lA-GE-Bbq">
-                            <color key="tintColor" red="0.1645585597" green="0.33261847500000002" blue="0.56867319350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <connections>
-                                <segue destination="0nc-en-KWP" kind="show" id="XgD-aD-g5O"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="+" image="plus" catalog="system" id="0lA-GE-Bbq">
+                                <color key="tintColor" red="0.1645585597" green="0.33261847500000002" blue="0.56867319350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="0nc-en-KWP" kind="show" id="XgD-aD-g5O"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="square.and.pencil" catalog="system" id="phv-d8-f6q">
+                                <color key="tintColor" red="0.1645585597" green="0.33261847500000002" blue="0.56867319350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="btnEditarPerfil:" destination="NHG-Gu-kwu" id="s5v-Nf-xBd"/>
+                                    <segue destination="p5d-Kn-xAX" kind="show" identifier="perfilSegue" id="Dqj-Bl-ywJ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tablaPeliculas" destination="qPe-JB-Wx8" id="wHt-cd-Fa1"/>
@@ -204,6 +213,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYR-Ee-X8z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1640.5797101449277" y="113.83928571428571"/>
+        </scene>
+        <!--Editar Perfil-->
+        <scene sceneID="utZ-Vq-Jz7">
+            <objects>
+                <viewController id="p5d-Kn-xAX" customClass="PerfilViewController" customModule="AdrianJSONRESTful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bWj-GP-Xbg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxd-j1-GUQ">
+                                <rect key="frame" x="171.5" y="147" width="71" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5AK-7X-i4e">
+                                <rect key="frame" x="87" y="183" width="240" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="wcU-If-O2X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnw-rH-bLa">
+                                <rect key="frame" x="182.5" y="239" width="49.5" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su Correo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOg-cp-I3e">
+                                <rect key="frame" x="87" y="275" width="240" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="W4I-uB-oFS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGw-pY-OkP">
+                                <rect key="frame" x="87" y="462" width="240" height="38"/>
+                                <color key="backgroundColor" red="0.1645585597" green="0.33261847500000002" blue="0.56867319350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="lao-62-iah"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Modificar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEditar:" destination="p5d-Kn-xAX" eventType="touchUpInside" id="c9t-J3-QGP"/>
+                                    <action selector="logear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z8b-dX-ynQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXt-WT-XMO">
+                                <rect key="frame" x="154.5" y="342" width="105.5" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkT-Dg-GPV">
+                                <rect key="frame" x="87" y="378" width="240" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="xTz-QH-enc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="leading" secondItem="gGw-pY-OkP" secondAttribute="leading" id="84o-9y-DpL"/>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="centerX" secondItem="AXt-WT-XMO" secondAttribute="centerX" id="CU7-UU-7Lm"/>
+                            <constraint firstItem="nkT-Dg-GPV" firstAttribute="top" secondItem="AXt-WT-XMO" secondAttribute="bottom" constant="10" id="Jso-OY-7SA"/>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="centerX" secondItem="bWj-GP-Xbg" secondAttribute="centerX" id="Ngv-Ug-L1u"/>
+                            <constraint firstItem="gxd-j1-GUQ" firstAttribute="top" secondItem="wW3-rt-HZE" secondAttribute="top" constant="59" id="O0E-ij-FnC"/>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="top" secondItem="bWj-GP-Xbg" secondAttribute="top" constant="275" id="RRP-zU-aZ1"/>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="leading" secondItem="5AK-7X-i4e" secondAttribute="leading" id="UR8-Bj-dMm"/>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="leading" secondItem="nkT-Dg-GPV" secondAttribute="leading" id="cUd-KL-HeY"/>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="top" secondItem="Pnw-rH-bLa" secondAttribute="bottom" constant="10" id="fos-2m-tyA"/>
+                            <constraint firstItem="AXt-WT-XMO" firstAttribute="top" secondItem="UOg-cp-I3e" secondAttribute="bottom" constant="33" id="ggX-xN-k80"/>
+                            <constraint firstItem="gGw-pY-OkP" firstAttribute="top" secondItem="nkT-Dg-GPV" secondAttribute="bottom" constant="50" id="iMi-l6-wLQ"/>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="centerX" secondItem="gxd-j1-GUQ" secondAttribute="centerX" id="ig3-Vn-EFV"/>
+                            <constraint firstItem="5AK-7X-i4e" firstAttribute="top" secondItem="gxd-j1-GUQ" secondAttribute="bottom" constant="10" id="pPW-an-gsv"/>
+                            <constraint firstItem="UOg-cp-I3e" firstAttribute="centerX" secondItem="Pnw-rH-bLa" secondAttribute="centerX" id="rsL-UR-MIg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wW3-rt-HZE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Editar Perfil" id="ZFC-Vj-Ayf"/>
+                    <connections>
+                        <outlet property="txtEditClave" destination="nkT-Dg-GPV" id="ptb-n9-mKH"/>
+                        <outlet property="txtEditEmail" destination="UOg-cp-I3e" id="N0z-fb-NT1"/>
+                        <outlet property="txtEditUsuario" destination="5AK-7X-i4e" id="UJM-Jw-Ong"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4n-C4-4Xi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="790"/>
         </scene>
         <!--Agregar View Controller-->
         <scene sceneID="TNG-ir-8f1">
@@ -350,6 +455,7 @@
     <resources>
         <image name="imagen_api" width="700" height="525"/>
         <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CqG-78-cSz"/>

@@ -29,11 +29,15 @@ class ViewController: UIViewController {
         validarUsuario(ruta: crearURL){
             if self.users.count <= 0{
                print("Nombre de usuario y/o contraseña es incorrecto")
+                let alerta = UIAlertController(title:"Error", message: "Nombre de usuario y/o contraseña es incorrecto", preferredStyle: .alert)
+                let btnOK = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+                alerta.addAction(btnOK)
+                self.present(alerta,animated: true,completion: nil)
             }else{
                 print("Logeo exitoso")
-                self.performSegue(withIdentifier: "segueLogeo", sender: nil)
+                self.performSegue(withIdentifier: "segueLogeo", sender: self.users[0])
                 for data in self.users{
-                    print("id\(data.id),nombre:\(data.nombre),email:\(data.email)")
+                    print("id:\(data.id),nombre:\(data.nombre),email:\(data.email)")
                 }
             }
         }
@@ -55,6 +59,11 @@ class ViewController: UIViewController {
             
         }.resume()
     }
-    
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueLogeo"{
+            let navVC = segue.destination as? UINavigationController
+            let siguienteVC = navVC?.viewControllers.first as! BuscarViewController
+            siguienteVC.user = sender as? Users
+        }
+    }}
 
